@@ -48,14 +48,37 @@ body {
 ul {
   width: 100%;
 }
-li {
+.lists-row {
   width: 100%;
-  background-color: lightgray;
-  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   list-style-type: none;
-  font-size: 12px;
+  font-size: 14px;
   min-height: 35px;
   align-items: center;
+}
+.lists-row h2 {
+  width: 100%;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.lists-row button {
+  margin-left: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  border: 1px solid gray;
+  transition: 0.5s;
+  cursor: pointer;
+  background: none;
+}
+.lists-row button:hover {
+  background: green;
+}
+.lists-row button:last-child:hover {
+  background: crimson;
 }
