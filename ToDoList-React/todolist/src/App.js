@@ -1,6 +1,7 @@
 import GetToDo from "./Components/GetToDo.js";
 import "./App.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import ToDoList from "./Components/ToDoLists.js";
 
 function App() {
   const [toDoLists, setToDoList] = useState([]);
@@ -11,23 +12,10 @@ function App() {
     setToDoList(newToDoList);
   };
 
-  useEffect(() => {
-    toDoLists.length > 0 && console.log(toDoLists);
-  }, [toDoLists]);
-
   return (
     <div className="App">
       <GetToDo updateList={updateList} />
-
-      {toDoLists.length > 0 && (
-        <div className="to-do-lists">
-          <ul>
-            {toDoLists.map((item) => (
-              <li key={item.id * 1}> {item.title} </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      <ToDoList toDoLists={toDoLists} />
     </div>
   );
 }

@@ -40,6 +40,10 @@ body {
   background: none;
   border: 1px solid lightgray;
   border-radius: 10px;
+  transition: 0.5s;
+}
+.get-to-do form button:hover {
+  background: yellowgreen;
 }
 ul {
   width: 100%;
@@ -52,4 +56,6 @@ li {
   border-radius: 5px;
   list-style-type: none;
   font-size: 12px;
+  min-height: 35px;
+  align-items: center;
 }

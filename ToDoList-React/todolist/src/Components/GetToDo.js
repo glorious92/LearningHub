@@ -1,11 +1,10 @@
 import { useState } from "react";
 
 const GetToDo = ({ updateList }) => {
-  const [todo, setToDo] = useState("");
+  const [toDo, setToDo] = useState("");
   const onSubmitHandler = (e) => {
     e.preventDefault();
-    updateList(todo);
-    // console.log("done");
+    toDo !== "" && updateList(toDo);
     setToDo("");
   };
 
@@ -23,7 +22,7 @@ const GetToDo = ({ updateList }) => {
         <input
           type="text"
           placeholder="Enter Item"
-          value={todo}
+          value={toDo}
           onChange={(e) => getItemHandler(e)}
         ></input>
         <button> Add To List</button>
