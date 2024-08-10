@@ -9,6 +9,13 @@ body {
   color: #323232;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .card-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -42,4 +49,25 @@ body {
 }
 .card > * {
   pointer-events: none;
+}
+
+.title {
+  margin-top: 50px;
+  padding: 10px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.button-get-data {
+  all: unset;
+  background: dodgerblue;
+  padding: 15px 20px;
+  margin: 20px;
+  border-radius: 10px;
+  color: white;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.button-get-data:hover {
+  background: #1e1e1e;
 }

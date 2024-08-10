@@ -4,20 +4,22 @@ const Cards = ({ data }) => {
   };
 
   return (
-    data &&
-    data.map((item) => {
-      return (
-        <li
-          key={item.id}
-          data-id={item.id}
-          className="card"
-          onClick={(e) => cardClickHandler(e)}
-        >
-          <span>{item.id}</span>
-          <p>{item.title}</p>
-        </li>
-      );
-    })
+    <>
+      {data &&
+        data.map((item) => {
+          return (
+            <li
+              key={item.id}
+              data-id={item.id}
+              className="card"
+              onClick={(e) => cardClickHandler(e)}
+            >
+              <span>{item.id}</span>
+              <p>{item.title}</p>
+            </li>
+          );
+        })}
+    </>
   );
 };
 export default Cards;
