@@ -1,22 +1,24 @@
-import GetInfo from "./components/helpers/GetInfo";
+import useGetInfo from "./components/helpers/useGetInfo";
 
 function App() {
-  const { data, error, loading } = GetInfo(
+  const { data, error, loading } = useGetInfo(
     "https://jsonplaceholder.typicode.com/posts/"
   );
-  console.log(data);
+  console.log(data, error, loading);
   return (
     <div>
-      <ul className="card-wrapper">
-        {data.map((item) => {
-          return (
-            <li key={item.id} className="card">
-              <span>{item.id}</span>
-              <p>{item.title}</p>
-            </li>
-          );
-        })}
-      </ul>
+      {data && (
+        <ul className="card-wrapper">
+          {data.map((item) => {
+            return (
+              <li key={item.id} className="card">
+                <span>{item.id}</span>
+                <p>{item.title}</p>
+              </li>
+            );
+          })}
+        </ul>
+      )}
     </div>
   );
 }

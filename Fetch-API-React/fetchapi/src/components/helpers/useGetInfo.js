@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 
-const GetInfo = (link) => {
+const useGetInfo = (link) => {
   const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(null);
-  const [data, setData] = useState(true);
+  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState(null);
 
   useEffect(() => {
     const fetchInfo = async () => {
@@ -27,4 +27,4 @@ const GetInfo = (link) => {
   return { data, error, loading };
 };
 
-export default GetInfo;
+export default useGetInfo;
