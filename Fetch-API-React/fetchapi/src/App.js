@@ -4,7 +4,10 @@ function App() {
   const { data, error, loading } = useGetInfo(
     "https://jsonplaceholder.typicode.com/posts/"
   );
-  console.log(error, loading);
+  if (error && loading) {
+    console.log(error, loading);
+    //just use for remove warning
+  }
   return <CardsWrapper data={data} />;
 }
 
