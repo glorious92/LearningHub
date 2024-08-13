@@ -25,7 +25,13 @@ body {
   color: white;
   background-color: #1e1e1e;
 }
-
+.main {
+  display: flex;
+  align-items: start;
+  height: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+}
 /* NavBar */
 ul,
 li {
@@ -113,4 +119,30 @@ li {
 }
 .post-parent li > * {
   pointer-events: none;
+}
+
+/* post card */
+.post-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 30px;
+  align-items: start;
+}
+
+.post-card h1 {
+  margin-bottom: 20px;
+}
+
+.post-card p {
+  line-height: 1.7;
+}
+
+/* title wrapper */
+.title-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
