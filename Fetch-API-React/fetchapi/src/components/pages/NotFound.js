@@ -1,4 +1,8 @@
 const NotFound = () => {
-  return <div> Not Found - 404 </div>;
+  return (
+    <div className="title-wrapper">
+      <h1>NOT FOUND</h1>
+    </div>
+  );
 };
 export default NotFound;
