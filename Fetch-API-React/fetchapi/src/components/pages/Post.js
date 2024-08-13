@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import Sppiner from "../layouts/Sppiner";
 const Post = () => {
   const { id } = useParams();
   const [data, setData] = useState(null);
@@ -20,10 +21,12 @@ const Post = () => {
     }
   }, [link, id]);
 
-  return (
+  return !data ? (
+    <Sppiner />
+  ) : (
     <div className="post-card">
-      <h1>{data && data.title}</h1>
-      <p>{data && data.body}</p>
+      <h1>{data.title}</h1>
+      <p>{data.body}</p>
     </div>
   );
 };
