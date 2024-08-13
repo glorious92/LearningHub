@@ -1,4 +1,4 @@
-const BLOGlog = () => {
+const Blog = () => {
   return <>BLOG</>;
 };
 export default Blog;
