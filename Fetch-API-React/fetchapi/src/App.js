@@ -1,10 +1,5 @@
-import CardsWrapper from "./components/layouts/CardsWrapper";
 function App() {
-  return (
-    <>
-      <CardsWrapper />
-    </>
-  );
+  return <></>;
 }
 
 export default App;
