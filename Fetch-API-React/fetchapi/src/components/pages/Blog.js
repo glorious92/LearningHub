@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Sppiner from "../layouts/Sppiner";
+import Spinner from "../layouts/Spinner";
 import Posts from "./Posts";
 const Blog = () => {
   const [data, setData] = useState(null);
@@ -17,6 +17,6 @@ const Blog = () => {
     getData(link);
   }, [link]);
 
-  return !data ? <Sppiner /> : <Posts data={data} />;
+  return !data ? <Spinner /> : <Posts data={data} />;
 };
 export default Blog;
