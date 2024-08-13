@@ -1,4 +1,12 @@
+import Navbar from "./Navbar";
 const Header = () => {
-  return <footer className="header"> HEADER</footer>;
+  return (
+    <>
+      <header className="header">
+        <h2>HEADER</h2>
+        <Navbar />
+      </header>
+    </>
+  );
 };
 export default Header;
