@@ -26,6 +26,7 @@ body {
   background-color: #1e1e1e;
 }
 
+/* NavBar */
 ul,
 li {
   list-style: none;
@@ -52,4 +53,64 @@ li {
 
 .navbar ul li a:hover {
   color: dodgerblue;
+}
+
+/* Sppiner */
+.sppiner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  height: 90px;
+  width: 90px;
+  border: 10px solid rgba(30, 143, 255, 0);
+  border-radius: 50%;
+  border-top: 10px solid rgba(30, 143, 255, 0.504);
+  transform: translate(-50%, -50%);
+  animation: sppiner 0.5s linear infinite;
+}
+
+@keyframes sppiner {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Blog */
+
+.post-parent {
+  display: grid;
+  width: 100%;
+  padding: 25px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.post-parent li {
+  display: flex;
+  background: rgba(255, 255, 255, 0.167);
+  box-shadow: rgba(0, 0, 0, 0.167) 0px 1px 4px;
+  padding: 20px;
+  border-radius: 20px;
+  height: 100px;
+  max-height: 100px;
+  overflow: scroll;
+  font-size: 14px;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.post-parent li:hover {
+  background-color: dodgerblue;
+  color: white;
+}
+.post-parent li h5 {
+  font-size: 30px;
+  margin-right: 10px;
+}
+.post-parent li > * {
+  pointer-events: none;
 }
